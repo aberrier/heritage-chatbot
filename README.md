@@ -48,7 +48,7 @@
 
 ![alt text][facebook-app]
 
-* Get your page Token [Messanger](https://developers.facebook.com/apps/258158857911674/messenger/).
+* Get your page Token [Messenger](https://developers.facebook.com/apps/258158857911674/messenger/).
 
 [facebook-pageToken]: https://raw.githubusercontent.com/RecastAI/bot-messenger/master/ressources/S%C3%A9lection_026.png "Creating you page"
 
