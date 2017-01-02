@@ -1,47 +1,52 @@
 {
-	"name": "facebook",
-	"version": "1.0.0",
-	"description": "",
-	"main": "server.js",
-	"scripts": {
-		"start": "node ./node_modules/babel-cli/bin/babel-node.js src/server.js",
-		"lint": "eslint src/"
-	},
-	"author": "Henri Floren",
-	"license": "ISC",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/RecastAI/bot-messenger.git"
-	},
-	"dependencies": {
-		"body-parser": "^1.15.2",
-		"express": "^4.14.0",
-		"recastai": "^2.2.1",
-		"request": "^2.75.0",
-		"babel-cli": "^6.11.4"
-	},
-	"devDependencies": {
-		"babel-eslint": "^6.1.2",
-		"babel-preset-es2015": "^6.9.0",
-		"babel-preset-stage-0": "^6.5.0",
-		"babel-register": "^6.11.5",
-		"eslint": "^2.9.0",
-		"eslint-config-airbnb-base": "^2.0.0",
-		"eslint-plugin-import": "^1.6.1"
-	},
-	"babel": {
-		"presets": [
-			"es2015",
-			"stage-0"
-		]
-	},
-	"eslintConfig": {
-		"extends": "airbnb-base",
-		"rules": {
-			"semi": [
-				2,
-				"never"
-	  ]
-		}
-	}
+  "name": "heritage",
+  "version": "1.0.0",
+  "description": "* Here, you'll learn how to build a bot with Facebook Messenger and Recast.AI.\r * If you don't know how to use Recast.AI, you can check this SDK first:  [Recast.AI-nodejs-SDK](https://github.com/RecastAI/SDK-NodeJs)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node ./node_modules/babel-cli/bin/babel-node.js src/server.js",
+    "lint": "eslint src/"
+  },
+  "author": "Henri Floren",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RecastAI/bot-messenger.git"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "recastai": "^2.2.1",
+    "request": "^2.75.0",
+    "babel-cli": "^6.11.4"
+  },
+  "devDependencies": {
+    "babel-eslint": "^6.1.2",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "babel-register": "^6.11.5",
+    "eslint": "^2.9.0",
+    "eslint-config-airbnb-base": "^2.0.0",
+    "eslint-plugin-import": "^1.6.1",
+    "json-loader": "^0.5.4"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-0"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "airbnb-base",
+    "rules": {
+      "semi": [
+        2,
+        "never"
+      ]
+    }
+  },
+  "bugs": {
+    "url": "https://github.com/RecastAI/bot-messenger/issues"
+  },
+  "homepage": "https://github.com/RecastAI/bot-messenger#readme"
 }

@@ -17,18 +17,37 @@ function handleMessage(event) {
       if (!reply) {
         const options = {
           messageText: null,
-          buttonTitle: 'My first button',    /* Option of your button. */
+          buttonTitle: 'Error',    /* Option of your button. */
           buttonUrl: 'https://recast.ai/',   /* If you like more option check out ./facebook.js the function replyButton, and look up */
           buttonType: 'web_url',             /* the facebook doc for button https://developers.facebook.com/docs/messenger-platform/send-api-reference#message */
           elementsTitle: 'I don\'t get it :(',
         }
         replyButton(senderID, options)        /* to reply a button */
       } else {
-        if (action && action.done === true) {
-          console.log('action is done')
-          // Use external services: use res.memory('notion') if you got a notion from this action
-        }
-        let promise = Promise.resolve()
+	  if (action && action.done && action.slug=='yes') {
+	
+		var loc = res.getMemory('location')
+		var time = res.getMemory('time')
+		//Dark Sky API
+		const DarkSky = require('dark-sky')
+		const forecast = new DarkSky('496eb996e9fc9aacdc560cd0ed06c347')
+		//Options setup
+		forecast.latitude(loc.lat)           
+		forecast.longitude(loc.lng)         
+		forecast.time(time.iso)            
+		forecast.units('ca')                   
+		forecast.language('en')                 
+		forecast.exclude('minutely,daily,hourly')              
+		var result = forecast.get().then(res => {                 
+			var val = res.currently
+			console.log(res)
+			var reply = "Region : " + res.timezone + "\nWeather : " + val.summary + "\nTemperature : " + val.temperature + "°C\nHumidity : " + val.humidity*100 +"%"
+			rtm.sendMessage(reply, dm)
+		})
+		.catch(err => {
+        console.log(err)
+		})
+		let promise = Promise.resolve()
         replies.forEach(rep => {
           promise = promise.then(() => replyMessage(senderID,rep))
         })
@@ -37,6 +56,8 @@ function handleMessage(event) {
         }).catch(err => {
           console.log(err)
         })
+    // Do something if you need: use res.memory('notion') if you got a notion from this action
+    }
       }
     }).catch(err => {
       console.log(err)
