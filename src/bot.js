@@ -41,7 +41,7 @@ function handleMessage(event) {
 		var result = forecast.get().then(res => {                 
 			var val = res.currently
 			console.log(res)
-			var reply = "Region : " + res.timezone + "\nWeather : " + val.summary + "\nTemperature : " + val.temperature + "°C\nHumidity : " + val.humidity*100 +"%"
+			var reply = "Region : " + res.timezone + "\nWeather : " + val.summary + "\nTemperature : " + val.temperature + "°C\nHumidity : " + val.humidity*100 +"%" + "\n Powered by Dark Sky"
 			rtm.sendMessage(reply, dm)
 		})
 		.catch(err => {
