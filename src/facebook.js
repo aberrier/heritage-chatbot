@@ -15,7 +15,7 @@ function sendMessage(messageData) {
       json: messageData,
     }, (error, response) => {
       if (!error && response.statusCode === 200) {
-        console.log('All good job is done')
+        console.log('Reply sent to Messenger successfuly')
         resolve()
       } else {
         reject(error)
@@ -46,7 +46,9 @@ function replyMessage(recipientId, messageText) {
     })
   })
 }
-
+function replyMessageData(messageData) {
+  sendMessage(messageData)
+}
 function replyButton(recipientId, option) {
   const messageData = {
     recipient: {
@@ -76,4 +78,5 @@ function replyButton(recipientId, option) {
 module.exports = {
   replyMessage,
   replyButton,
+  sendMessage
 }

@@ -14,11 +14,12 @@
     "url": "git+https://github.com/RecastAI/bot-messenger.git"
   },
   "dependencies": {
+    "babel-cli": "^6.11.4",
     "body-parser": "^1.15.2",
+    "dark-sky": "^1.0.10",
     "express": "^4.14.0",
     "recastai": "^2.2.1",
-    "request": "^2.75.0",
-    "babel-cli": "^6.11.4"
+    "request": "^2.75.0"
   },
   "devDependencies": {
     "babel-eslint": "^6.1.2",
