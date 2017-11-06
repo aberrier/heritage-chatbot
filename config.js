@@ -1,8 +1,8 @@
 const config = {}
 
-config.pageAccessToken = 'EAADkRXXneoABAGM9uK5oWhapidR5IYtlU9FTSXOupVaN1jHuX1tgHLDKl9RzkaXwZBCtDMnAdZAzs3m1UyytDxUjceBjvBKB5WUBhk1z5m4C45qr6bw5LwYOlJfYh16sKrlBE6NtcZCxdxkiIPyvHlK3ZCpIyZCNE9SIHiMneHQZDZD'
-config.validationToken = 'ABCD1234'
-config.recastToken = '839463246e404a1b4fcb50d7c7189472'
+config.pageAccessToken = 'xx'
+config.validationToken = 'xx'
+config.recastToken = 'xx'
 config.language = 'en'
-config.darsky = '496eb996e9fc9aacdc560cd0ed06c347'
+config.darsky = 'xx'
 module.exports = config
